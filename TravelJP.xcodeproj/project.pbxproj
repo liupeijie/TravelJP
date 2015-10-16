@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B3B18E71BD12F690085D7D5 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3B18E61BD12F690085D7D5 /* AddViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		8B9779611BCA6DB200FF54D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9779601BCA6DB200FF54D4 /* AppDelegate.swift */; };
 		8B9779631BCA6DB200FF54D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9779621BCA6DB200FF54D4 /* ViewController.swift */; };
 		8B9779661BCA6DB200FF54D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B9779641BCA6DB200FF54D4 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B3B18E61BD12F690085D7D5 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		8B97795D1BCA6DB200FF54D4 /* TravelJP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelJP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B9779601BCA6DB200FF54D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B9779621BCA6DB200FF54D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				8B9779671BCA6DB200FF54D4 /* Assets.xcassets */,
 				8B9779691BCA6DB200FF54D4 /* LaunchScreen.storyboard */,
 				8B97796C1BCA6DB200FF54D4 /* Info.plist */,
+				8B3B18E61BD12F690085D7D5 /* AddViewController.swift */,
 			);
 			path = TravelJP;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				8B9779631BCA6DB200FF54D4 /* ViewController.swift in Sources */,
 				8B9779611BCA6DB200FF54D4 /* AppDelegate.swift in Sources */,
+				8B3B18E71BD12F690085D7D5 /* AddViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +492,7 @@
 				8B9779871BCA6DB200FF54D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8B9779881BCA6DB200FF54D4 /* Build configuration list for PBXNativeTarget "TravelJPTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +501,7 @@
 				8B97798A1BCA6DB200FF54D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8B97798B1BCA6DB200FF54D4 /* Build configuration list for PBXNativeTarget "TravelJPUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +510,7 @@
 				8B97798D1BCA6DB200FF54D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

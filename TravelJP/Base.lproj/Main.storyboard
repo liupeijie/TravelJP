@@ -28,6 +28,7 @@
                                 </state>
                                 <connections>
                                     <action selector="makeRoot" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yo6-b4-vmB"/>
+                                    <segue destination="dNX-PF-QMa" kind="show" id="Uq4-aH-Hd7"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="お気に入りスポット一覧：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1L-gB-Igs">
@@ -101,7 +102,44 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="273.5" y="249.5"/>
+            <point key="canvasLocation" x="-68.5" y="-157.5"/>
+        </scene>
+        <!--Add View Controller-->
+        <scene sceneID="0Kf-vY-WXG">
+            <objects>
+                <viewController id="dNX-PF-QMa" customClass="AddViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f8G-UD-92D"/>
+                        <viewControllerLayoutGuide type="bottom" id="sk2-YB-C2A"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Fw-PK-Hu5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="画面2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLQ-UD-4Ng">
+                                <rect key="frame" x="172" y="366" width="44" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U6b-Xm-ety">
+                                <rect key="frame" x="167" y="477" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="5AX-OE-5kN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OnF-3W-avB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="383.5" y="-293.5"/>
         </scene>
     </scenes>
 </document>
