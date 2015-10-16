@@ -63,6 +63,19 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         }
     }
     
+    /*
+    今はただテスト用に作ったもの、画面や変数など整いたら地図画面に遷移するかも
+    */
+    @IBAction func addCell() {
+        print("追加")
+        
+        // myItemsに追加.
+        items.addObject("add Cell")
+        
+        // TableViewを再読み込み.
+        tableView.reloadData()
+    }
+  
     
     @IBAction func makeRoot() {
         //ルート作成ボタンのメソット
