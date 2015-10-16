@@ -10,11 +10,8 @@ import UIKit
 
 class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
     
-    //テーブルビューインスタンス作成
-//    var tableView: UITableView  =   UITableView()
-    
     @IBOutlet var tableView: UITableView!
-  //  @IBOutlet var cell2: UITableViewCell!
+
     //テーブルに表示するセル配列
     let items: NSMutableArray = ["TEST1", "TEST2", "TEST3"]
     
@@ -23,13 +20,11 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         // Do any additional setup after loading the view, typically from a nib.
         
         //テーブルビュー初期化、関連付け
-//        tableView.frame         =   CGRectMake(0, 200, 390, 250);
         tableView.delegate      =   self
         tableView.dataSource    =   self
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.estimatedRowHeight = 84
         tableView.rowHeight = UITableViewAutomaticDimension
-//        self.view.addSubview(tableView)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,8 +40,6 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("セルを選択しました！ #\(indexPath.row)!")
-        
-        
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
