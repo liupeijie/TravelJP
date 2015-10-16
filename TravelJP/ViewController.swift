@@ -8,18 +8,73 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+    
+    //テーブルビューインスタンス作成
+//    var tableView: UITableView  =   UITableView()
+    
+    @IBOutlet var tableView: UITableView!
+  //  @IBOutlet var cell2: UITableViewCell!
+    //テーブルに表示するセル配列
+    let items: NSMutableArray = ["TEST1", "TEST2", "TEST3"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //テーブルビュー初期化、関連付け
+//        tableView.frame         =   CGRectMake(0, 200, 390, 250);
+        tableView.delegate      =   self
+        tableView.dataSource    =   self
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.estimatedRowHeight = 84
+        tableView.rowHeight = UITableViewAutomaticDimension
+//        self.view.addSubview(tableView)
     }
-
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.items.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
+        // Cellに値を設定.
+        cell.textLabel?.text = "\(items[indexPath.row])"
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("セルを選択しました！ #\(indexPath.row)!")
+        
+        
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        // 削除のとき.
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            print("削除")
+            
+            // 指定されたセルのオブジェクトをmyItemsから削除する.
+            items.removeObjectAtIndex(indexPath.row)
+            
+            // TableViewを再読み込み.
+            tableView.reloadData()
+        }
+    }
+    
+    
+    @IBAction func makeRoot() {
+        //ルート作成ボタンのメソット
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
