@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--ファイル-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TravelJP" customModuleProvider="target" sceneMemberID="viewController">
@@ -74,7 +74,6 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="ファイル" id="wO1-GO-sTy"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -136,7 +135,6 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="exQ-BV-He6"/>
                         <segue destination="Tdl-ST-lgh" kind="relationship" relationship="viewControllers" id="xfv-XO-Fd0"/>
                         <segue destination="W0r-gZ-vKu" kind="relationship" relationship="viewControllers" id="7cA-zH-Mle"/>
                     </connections>
@@ -153,17 +151,29 @@
                         <viewControllerLayoutGuide type="top" id="Uc5-Lr-rFd"/>
                         <viewControllerLayoutGuide type="bottom" id="xN9-3N-oNd"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="KS9-b0-n6D">
+                    <view key="view" contentMode="scaleToFill" id="KS9-b0-n6D" customClass="myImageView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="map commit a new one" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9L-mO-cQN">
-                                <rect key="frame" x="30" y="210" width="178" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="map.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Tn-AE-0wq">
+                                <rect key="frame" x="20" y="172" width="335" height="283"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="旅行したい地域を地図から選択してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAe-X5-dYn">
+                                <rect key="frame" x="15" y="98" width="340" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4R-vq-nni">
+                                <rect key="frame" x="258" y="172" width="92" height="73"/>
+                                <animations/>
+                                <connections>
+                                    <action selector="hokaido" destination="Tdl-ST-lgh" eventType="touchUpInside" id="a0E-fr-hDm"/>
+                                    <segue destination="PHb-ye-Zk2" kind="modal" id="99C-K6-oAv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -174,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NuB-bl-GIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-486.5" y="-8.5"/>
+            <point key="canvasLocation" x="-542.5" y="-626.5"/>
         </scene>
         <!--Plan File-->
         <scene sceneID="KaX-Pm-liK">
@@ -195,6 +205,14 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtT-ri-c32">
+                                <rect key="frame" x="145" y="91" width="105" height="30"/>
+                                <animations/>
+                                <state key="normal" title="東京ファイルへ"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="2VH-wG-7Yp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -205,8 +223,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9tY-0d-qwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-65.5" y="-8.5"/>
+            <point key="canvasLocation" x="-91.5" y="-8.5"/>
+        </scene>
+        <!--Spots View Controller-->
+        <scene sceneID="DqG-I5-iYR">
+            <objects>
+                <viewController id="PHb-ye-Zk2" customClass="SpotsViewController" customModule="TravelJP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PSp-8B-LfQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="yos-H4-QhY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rX8-aF-cI2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AR3-sX-ATj">
+                                <rect key="frame" x="172" y="174" width="30" height="30"/>
+                                <animations/>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <segue destination="kqR-Pl-fIn" kind="unwind" unwindAction="return2:" id="RnE-VG-UpT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="epq-Mh-wmU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="kqR-Pl-fIn" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-524.5" y="99.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="map.png" width="881" height="583"/>
+    </resources>
     <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -1,32 +1,26 @@
 //
-//  mapViewController.swift
+//  SpotsViewController.swift
 //  TravelJP
 //
-//  Created by 向日葵会下雨 on H27/10/17.
+//  Created by 向日葵会下雨 on H27/10/18.
 //  Copyright © 平成27年 向日葵会下雨. All rights reserved.
 //
 
 import UIKit
 
-class mapViewController: UIViewController {
+class SpotsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        // Do any additional setup after loading the view.
     }
 
-    @IBAction func hokaido() {
-        
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func return2 (segue: UIStoryboardSegue) {
-    }
 
     /*
     // MARK: - Navigation

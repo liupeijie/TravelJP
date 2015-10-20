@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B03EF871BD3E43E0086E7AE /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B03EF861BD3E43E0086E7AE /* map.png */; settings = {ASSET_TAGS = (); }; };
+		8B03EF891BD3E7D10086E7AE /* SpotsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B03EF881BD3E7D10086E7AE /* SpotsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		8B3B18E71BD12F690085D7D5 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3B18E61BD12F690085D7D5 /* AddViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		8B3B18E91BD14D160085D7D5 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3B18E81BD14D160085D7D5 /* TabViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		8B3B18EB1BD14F100085D7D5 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3B18EA1BD14F100085D7D5 /* mapViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B03EF861BD3E43E0086E7AE /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		8B03EF881BD3E7D10086E7AE /* SpotsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotsViewController.swift; sourceTree = "<group>"; };
 		8B3B18E61BD12F690085D7D5 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		8B3B18E81BD14D160085D7D5 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		8B3B18EA1BD14F100085D7D5 /* mapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 				8B3B18E81BD14D160085D7D5 /* TabViewController.swift */,
 				8B3B18EA1BD14F100085D7D5 /* mapViewController.swift */,
 				8B3B18EC1BD14F1F0085D7D5 /* planViewController.swift */,
+				8B03EF861BD3E43E0086E7AE /* map.png */,
+				8B03EF881BD3E7D10086E7AE /* SpotsViewController.swift */,
 			);
 			path = TravelJP;
 			sourceTree = "<group>";
@@ -241,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B03EF871BD3E43E0086E7AE /* map.png in Resources */,
 				8B97796B1BCA6DB200FF54D4 /* LaunchScreen.storyboard in Resources */,
 				8B9779681BCA6DB200FF54D4 /* Assets.xcassets in Resources */,
 				8B9779661BCA6DB200FF54D4 /* Main.storyboard in Resources */,
@@ -268,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B03EF891BD3E7D10086E7AE /* SpotsViewController.swift in Sources */,
 				8B3B18E91BD14D160085D7D5 /* TabViewController.swift in Sources */,
 				8B3B18ED1BD14F1F0085D7D5 /* planViewController.swift in Sources */,
 				8B3B18EB1BD14F100085D7D5 /* mapViewController.swift in Sources */,
