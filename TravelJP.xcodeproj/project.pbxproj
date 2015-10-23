@@ -119,9 +119,9 @@
 		8B97795F1BCA6DB200FF54D4 /* TravelJP */ = {
 			isa = PBXGroup;
 			children = (
-				D29279AB1BD7C275005DA4D5 /* class */,
-				D29279A51BD7C004005DA4D5 /* OGActionChooser */,
 				D29279AC1BD7C2A6005DA4D5 /* images */,
+				D29279A51BD7C004005DA4D5 /* OGActionChooser */,
+				D29279AB1BD7C275005DA4D5 /* class */,
 			);
 			path = TravelJP;
 			sourceTree = "<group>";
