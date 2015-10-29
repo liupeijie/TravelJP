@@ -9,8 +9,10 @@
 import UIKit
 
 class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIApplicationDelegate {
-    var wordArray: [AnyObject] = []
-    let saveData = NSUserDefaults.standardUserDefaults()
+    let saveData = NSUserDefaults.standardUserDefaults()//NSUserDefaultsを使うための宣言
+    var spotArray: [AnyObject] = []//ユーザーデフォルトから取る配列
+    var spotArray2: [AnyObject] = []
+    var spotArray3: [AnyObject] = []
     //Sectionで使用する配列を定義
     let sectionTitle: NSMutableArray = ["東京都","千葉県","神奈川県"]
     let tokyo = ["東京スカイツリー", "東京タワー", "渋谷","more"]
@@ -27,15 +29,23 @@ class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIA
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-//=======================================================値渡し
+        //=======================================================値受け取り
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         fileName = appDelegate.ViewVal //fileNameにStringの値を引き渡す
         fileCount = appDelegate.ViewVal2
-
+        //=======================================================
         
-        if saveData.objectForKey("WORD") != nil {
-            wordArray = saveData.objectForKey("WORD") as! Array
+        //ユーザーデフォルトリロード
+        if saveData.objectForKey("file1Key") != nil {
+            spotArray = saveData.objectForKey("file1Key") as! Array
         }
+        if saveData.objectForKey("file2Key") != nil {
+            spotArray2 = saveData.objectForKey("file2Key") as! Array
+        }
+        if saveData.objectForKey("file3Key") != nil {
+            spotArray3 = saveData.objectForKey("file3Key") as! Array
+        }
+        
         tableView.reloadData()
     }
     
@@ -87,7 +97,7 @@ class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIA
             
 //==================================================================================
             if(indexPath.section == 0){//==========================indexPath.sectionはセクション番号
-                spotName = tokyo[indexPath.row]
+                spotName = tokyo[indexPath.row]//spotNameに観光地名を一時的に保存
             }else if(indexPath.section == 1){
                 spotName = chiba[indexPath.row]
             }else if(indexPath.section == 2){
@@ -101,6 +111,7 @@ class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIA
             acSheet.title = "ファイルに追加"
             let imgName: String = "actionChooser_Button.png"
             
+            //ファイル数と同じ数だけボタンを表示
             if(fileCount == 0){
                 
             }else if(fileCount == 1){
@@ -167,12 +178,81 @@ class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIA
         case 0:
             NSLog("1")
             print("観光地名：\(spotName)")
+            spotArray.append(spotName)//配列にspotNameの文字列を保存
+            saveData.setObject(spotArray, forKey: "file1Key")//配列をspotNameKeyで保存
+            saveData.synchronize()
+            
+            let alert = UIAlertController(
+                title: "登録完了",
+                message: "ファイルに登録が完了しました",
+                preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(
+                UIAlertAction(
+                    title: "OK",
+                    style: UIAlertActionStyle.Default,
+                    handler:nil
+                )
+            )
+            self.presentViewController(alert, animated: true, completion:nil)
         case 1:
             NSLog("2")
+            print("観光地名：\(spotName)")
+            spotArray2.append(spotName)//配列にspotNameの文字列を保存
+            saveData.setObject(spotArray2, forKey: "file2Key")//配列をspotNameKeyで保存
+            saveData.synchronize()
+            
+            let alert = UIAlertController(
+                title: "登録完了",
+                message: "ファイルに登録が完了しました",
+                preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(
+                UIAlertAction(
+                    title: "OK",
+                    style: UIAlertActionStyle.Default,
+                    handler:nil
+                )
+            )
+            self.presentViewController(alert, animated: true, completion:nil)
+            
         case 2:
             NSLog("3")
+            spotArray3.append(spotName)//配列にspotNameの文字列を保存
+            saveData.setObject(spotArray3, forKey: "file3Key")//配列をspotNameKeyで保存
+            saveData.synchronize()
+            
+            let alert = UIAlertController(
+                title: "登録完了",
+                message: "ファイルに登録が完了しました",
+                preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(
+                UIAlertAction(
+                    title: "OK",
+                    style: UIAlertActionStyle.Default,
+                    handler:nil
+                )
+            )
+            self.presentViewController(alert, animated: true, completion:nil)
         case 3:
             NSLog("4")
+            //削除
+            spotArray.removeAll()
+            spotArray2.removeAll()
+            spotArray3.removeAll()
+            saveData.removeObjectForKey("file1Key")
+            saveData.removeObjectForKey("file2Key")
+            saveData.removeObjectForKey("file3Key")
+            let alert = UIAlertController(
+                title: "削除完了",
+                message: "ファイルの中身を全て削除しました",
+                preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(
+                UIAlertAction(
+                    title: "OK",
+                    style: UIAlertActionStyle.Default,
+                    handler:nil
+                )
+            )
+            self.presentViewController(alert, animated: true, completion:nil)
         case 4:
             NSLog("5")
         case 5:
