@@ -130,15 +130,15 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Tdl-ST-lgh" kind="relationship" relationship="viewControllers" id="xfv-XO-Fd0"/>
-                        <segue destination="Vcl-kz-tnh" kind="relationship" relationship="viewControllers" id="7cA-zH-Mle"/>
+                        <segue destination="Vcl-kz-tnh" kind="relationship" relationship="viewControllers" id="aB7-3s-VWq"/>
+                        <segue destination="Tdl-ST-lgh" kind="relationship" relationship="viewControllers" id="YhZ-h6-T15"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qiY-vv-ysZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-734.5" y="-888.5"/>
         </scene>
-        <!--map-->
+        <!--Map-->
         <scene sceneID="qBH-41-sVQ">
             <objects>
                 <viewController id="Tdl-ST-lgh" customClass="mapViewController" customModule="TravelJP" customModuleProvider="target" sceneMemberID="viewController">
@@ -171,7 +171,7 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="map" id="IG5-9r-b5s"/>
+                    <tabBarItem key="tabBarItem" title="Map" id="IG5-9r-b5s"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
@@ -296,11 +296,11 @@
             </objects>
             <point key="canvasLocation" x="-1400.5" y="694.5"/>
         </scene>
-        <!--Plan File-->
+        <!--Plan-->
         <scene sceneID="HX0-qm-Jf9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Vcl-kz-tnh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Plan File" id="1ft-YN-nbr"/>
+                    <tabBarItem key="tabBarItem" title="Plan" id="1ft-YN-nbr"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="WTs-kN-zMV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

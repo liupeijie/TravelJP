@@ -12,11 +12,13 @@ class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIA
     var wordArray: [AnyObject] = []
     let saveData = NSUserDefaults.standardUserDefaults()
     //Sectionで使用する配列を定義
-    let sectionTitle: NSArray = ["東京都","千葉県","神奈川県"]
-    let tokyo = ["スカイツリー", "東京タワー", "渋谷","more"]
+    let sectionTitle: NSMutableArray = ["東京都","千葉県","神奈川県"]
+    let tokyo = ["東京スカイツリー", "東京タワー", "渋谷","more"]
     let chiba = ["ディズニー", "幕張", "船橋","more"]
     let kanagawa = ["中華街", "赤レンガ倉庫", "江ノ島","more"]
-    var fileName: NSArray!
+    var fileName: NSMutableArray!
+    var fileCount: Int!
+    var spotName: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +30,8 @@ class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIA
 //=======================================================値渡し
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         fileName = appDelegate.ViewVal //fileNameにStringの値を引き渡す
-//        print("名前\(fileName)")
+        fileCount = appDelegate.ViewVal2
+
         
         if saveData.objectForKey("WORD") != nil {
             wordArray = saveData.objectForKey("WORD") as! Array
@@ -80,25 +83,45 @@ class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIA
     
     //===============================================Cellが選択された際に呼び出される
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-        // 選択中のセルが何番目か.
-        print("Num: \(indexPath.row)")
-        
-        // 選択中のセルを編集できるか.
-        print("Edeintg: \(tableView.editing)")
-        
         if(indexPath.row < 3){
-            //=========================================================
+            
+//==================================================================================
+            if(indexPath.section == 0){//==========================indexPath.sectionはセクション番号
+                spotName = tokyo[indexPath.row]
+            }else if(indexPath.section == 1){
+                spotName = chiba[indexPath.row]
+            }else if(indexPath.section == 2){
+                spotName = kanagawa[indexPath.row]
+            }
+//            print("観光地名：\(spotName)")
+//==================================================================================
+            
+//==================================================================================
             let acSheet: OGActionChooser = OGActionChooser.actionChooserWithDelegate(self) as! OGActionChooser
             acSheet.title = "ファイルに追加"
             let imgName: String = "actionChooser_Button.png"
-            //            var i: Int = 0
-            let fst: OGActionButton = OGActionButton.buttonWithTitle(fileName[0] as! String, imageName: imgName, enabled: true) as! OGActionButton
-            let snd: OGActionButton = OGActionButton.buttonWithTitle(fileName[1] as! String, imageName: imgName, enabled: true) as! OGActionButton
-            let trd: OGActionButton = OGActionButton.buttonWithTitle(fileName[2] as! String, imageName: imgName, enabled: true) as! OGActionButton
-            let fth: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
             
-            acSheet.setButtonsWithArray([fst,snd,trd,fth])
+            if(fileCount == 0){
+                
+            }else if(fileCount == 1){
+                let b1: OGActionButton = OGActionButton.buttonWithTitle(fileName[0] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                acSheet.setButtonsWithArray([b1])
+            }else if(fileCount == 2){
+                let b1: OGActionButton = OGActionButton.buttonWithTitle(fileName[0] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b2: OGActionButton = OGActionButton.buttonWithTitle(fileName[1] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                acSheet.setButtonsWithArray([b1,b2])
+            }else if(fileCount == 3){
+                let b1: OGActionButton = OGActionButton.buttonWithTitle(fileName[0] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b2: OGActionButton = OGActionButton.buttonWithTitle(fileName[1] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b3: OGActionButton = OGActionButton.buttonWithTitle(fileName[2] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                acSheet.setButtonsWithArray([b1,b2,b3])
+            }else if(fileCount == 4){
+                let b1: OGActionButton = OGActionButton.buttonWithTitle(fileName[0] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b2: OGActionButton = OGActionButton.buttonWithTitle(fileName[1] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b3: OGActionButton = OGActionButton.buttonWithTitle(fileName[2] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b4: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                acSheet.setButtonsWithArray([b1,b2,b3,b4])
+            }
             acSheet.presentInView(tableView.superview)
             //=========================================================
         }
@@ -142,11 +165,12 @@ class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIA
     func actionChooser(ac: OGActionChooser, buttonPressedWithIndex index: Int) {
         switch index {
         case 0:
-            ac.shouldDrawShadow = !ac.shouldDrawShadow
+            NSLog("1")
+            print("観光地名：\(spotName)")
         case 1:
-            ac.shouldDrawShadow = !ac.shouldDrawShadow
+            NSLog("2")
         case 2:
-            ac.backgroundColor = UIColor.blueColor()
+            NSLog("3")
         case 3:
             NSLog("4")
         case 4:
