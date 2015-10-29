@@ -16,6 +16,7 @@ class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIA
     let tokyo = ["スカイツリー", "東京タワー", "渋谷","more"]
     let chiba = ["ディズニー", "幕張", "船橋","more"]
     let kanagawa = ["中華街", "赤レンガ倉庫", "江ノ島","more"]
+    var fileName: NSArray!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,11 @@ class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIA
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+//=======================================================値渡し
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        fileName = appDelegate.ViewVal //fileNameにStringの値を引き渡す
+//        print("名前\(fileName)")
+        
         if saveData.objectForKey("WORD") != nil {
             wordArray = saveData.objectForKey("WORD") as! Array
         }
@@ -70,6 +76,8 @@ class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIA
         return cell
     }
     
+    
+    
     //===============================================Cellが選択された際に呼び出される
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
@@ -84,10 +92,11 @@ class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIA
             let acSheet: OGActionChooser = OGActionChooser.actionChooserWithDelegate(self) as! OGActionChooser
             acSheet.title = "ファイルに追加"
             let imgName: String = "actionChooser_Button.png"
-            let fst: OGActionButton = OGActionButton.buttonWithTitle("name1", imageName: imgName, enabled: true) as! OGActionButton
-            let snd: OGActionButton = OGActionButton.buttonWithTitle("name2", imageName: imgName, enabled: true) as! OGActionButton
-            let trd: OGActionButton = OGActionButton.buttonWithTitle("name3", imageName: imgName, enabled: true) as! OGActionButton
-            let fth: OGActionButton = OGActionButton.buttonWithTitle("name4", imageName: imgName, enabled: true) as! OGActionButton
+            //            var i: Int = 0
+            let fst: OGActionButton = OGActionButton.buttonWithTitle(fileName[0] as! String, imageName: imgName, enabled: true) as! OGActionButton
+            let snd: OGActionButton = OGActionButton.buttonWithTitle(fileName[1] as! String, imageName: imgName, enabled: true) as! OGActionButton
+            let trd: OGActionButton = OGActionButton.buttonWithTitle(fileName[2] as! String, imageName: imgName, enabled: true) as! OGActionButton
+            let fth: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
             
             acSheet.setButtonsWithArray([fst,snd,trd,fth])
             acSheet.presentInView(tableView.superview)

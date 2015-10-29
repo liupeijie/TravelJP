@@ -10,7 +10,7 @@ import UIKit
 
 class planViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet var table:UITableView!
-    let label2Array: NSArray = ["2013/8/23/16:04","2013/8/23/16:15","2013/8/23/16:47","2013/8/23/17:10",
+    let label2Array: NSArray = ["a","2013/8/23/16:15","2013/8/23/16:47","2013/8/23/17:10",
         "2013/8/23/1715:","2013/8/23/17:21","2013/8/23/17:33","2013/8/23/17:41"]
 
     override func viewDidLoad() {
@@ -78,6 +78,12 @@ class planViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+//==========================================================================値渡しのためのもの
+    override func viewWillDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.ViewVal = label2Array //Stringの値を引き渡す
     }
     
 
