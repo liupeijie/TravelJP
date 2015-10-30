@@ -97,8 +97,13 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
             print("削除")
             
             // 指定されたセルのオブジェクトをmyItemsから削除する.
-//            items.removeObjectAtIndex(indexPath.row)
-            
+       //    spotArray.removeObjectAtIndex(indexPath.row)
+            spotArray.removeAll()
+            spotArray2.removeAll()
+            spotArray3.removeAll()
+            saveData.removeObjectForKey("file1Key")
+            saveData.removeObjectForKey("file2Key")
+            saveData.removeObjectForKey("file3Key")
             // TableViewを再読み込み.
             tableView.reloadData()
         }

@@ -271,7 +271,7 @@
 				TargetAttributes = {
 					8B97795C1BCA6DB200FF54D4 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = 7CFPLNDE4E;
+						DevelopmentTeam = 9TYYG5748P;
 					};
 					8B9779701BCA6DB200FF54D4 = {
 						CreatedOnToolsVersion = 7.0.1;
