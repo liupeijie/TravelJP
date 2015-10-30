@@ -24,7 +24,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         //=======================================================値受け取り
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         fileNumber = appDelegate.ViewVal3
-        print("aa:\(fileNumber)")
+        print("fileNumber:\(fileNumber)")
         //=======================================================
         if(fileNumber == 1){
             if (saveData.objectForKey("file1Key") != nil ){
@@ -51,7 +51,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.estimatedRowHeight = 84
         tableView.rowHeight = UITableViewAutomaticDimension
-        print("bb:\(fileNumber)")
+        print("fileNumber:\(fileNumber)")
         
     }
     

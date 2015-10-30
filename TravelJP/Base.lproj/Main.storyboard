@@ -61,7 +61,7 @@
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="2cB-ks-rx4" kind="modal" id="NAq-pR-D1B"/>
+                                    <segue destination="Tdl-ST-lgh" kind="push" id="CIk-jT-AOo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -182,7 +182,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g4R-vq-nni">
-                                <rect key="frame" x="259" y="172" width="96" height="72"/>
+                                <rect key="frame" x="290" y="340" width="65" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                                 <connections>
@@ -194,6 +194,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" id="IG5-9r-b5s"/>
+                    <navigationItem key="navigationItem" id="3nM-bZ-DEs"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
@@ -342,6 +343,6 @@
         <image name="map.png" width="881" height="583"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NAq-pR-D1B"/>
+        <segue reference="CIk-jT-AOo"/>
     </inferredMetricsTieBreakers>
 </document>

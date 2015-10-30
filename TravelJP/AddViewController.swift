@@ -27,7 +27,7 @@ class AddViewController: UIViewController, CLLocationManagerDelegate {
         //=======================================================値受け取り
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         fileNumber = appDelegate.ViewVal3
-        print("aaaaaa:\(fileNumber)")
+        print("fileNumber:\(fileNumber)")
         //=======================================================
         if(fileNumber == 1){
             if (saveData.objectForKey("file1Key") != nil ){

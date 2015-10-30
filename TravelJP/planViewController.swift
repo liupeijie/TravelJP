@@ -47,13 +47,12 @@ class planViewController: UIViewController, UITableViewDataSource, UITableViewDe
     // Cell が選択された場合
     func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
         fileNumber = indexPath.row + 1
-        print("\(fileNumber)")
+        print("fileNumber:\(fileNumber)")
     }
     
     // Segue 準備
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "toViewController") {
-            print("aaaa")
         }
     }
 
