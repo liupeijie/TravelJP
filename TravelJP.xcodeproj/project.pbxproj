@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8B03EF871BD3E43E0086E7AE /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B03EF861BD3E43E0086E7AE /* map.png */; settings = {ASSET_TAGS = (); }; };
-		8B3B18E71BD12F690085D7D5 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3B18E61BD12F690085D7D5 /* AddViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		8B3B18E91BD14D160085D7D5 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3B18E81BD14D160085D7D5 /* TabViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		8B3B18EB1BD14F100085D7D5 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3B18EA1BD14F100085D7D5 /* mapViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		8B3B18ED1BD14F1F0085D7D5 /* planViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3B18EC1BD14F1F0085D7D5 /* planViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		8B03EF871BD3E43E0086E7AE /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B03EF861BD3E43E0086E7AE /* map.png */; };
+		8B3B18E71BD12F690085D7D5 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3B18E61BD12F690085D7D5 /* AddViewController.swift */; };
+		8B3B18E91BD14D160085D7D5 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3B18E81BD14D160085D7D5 /* TabViewController.swift */; };
+		8B3B18EB1BD14F100085D7D5 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3B18EA1BD14F100085D7D5 /* mapViewController.swift */; };
+		8B3B18ED1BD14F1F0085D7D5 /* planViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3B18EC1BD14F1F0085D7D5 /* planViewController.swift */; };
 		8B9779611BCA6DB200FF54D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9779601BCA6DB200FF54D4 /* AppDelegate.swift */; };
 		8B9779631BCA6DB200FF54D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9779621BCA6DB200FF54D4 /* ViewController.swift */; };
 		8B9779661BCA6DB200FF54D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B9779641BCA6DB200FF54D4 /* Main.storyboard */; };
@@ -19,11 +19,12 @@
 		8B97796B1BCA6DB200FF54D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B9779691BCA6DB200FF54D4 /* LaunchScreen.storyboard */; };
 		8B9779761BCA6DB200FF54D4 /* TravelJPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9779751BCA6DB200FF54D4 /* TravelJPTests.swift */; };
 		8B9779811BCA6DB200FF54D4 /* TravelJPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9779801BCA6DB200FF54D4 /* TravelJPUITests.swift */; };
-		D292799D1BD7BECB005DA4D5 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D292799C1BD7BECB005DA4D5 /* ListTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		D29279A01BD7BEE5005DA4D5 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D292799E1BD7BEE5005DA4D5 /* ListTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		D29279A11BD7BEE5005DA4D5 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D292799F1BD7BEE5005DA4D5 /* ListTableViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		D29279A91BD7C02B005DA4D5 /* actionChooser_Button.png in Resources */ = {isa = PBXBuildFile; fileRef = D29279A61BD7C02B005DA4D5 /* actionChooser_Button.png */; settings = {ASSET_TAGS = (); }; };
-		D29279AA1BD7C02B005DA4D5 /* OGActionChooser.m in Sources */ = {isa = PBXBuildFile; fileRef = D29279A81BD7C02B005DA4D5 /* OGActionChooser.m */; settings = {ASSET_TAGS = (); }; };
+		D292799D1BD7BECB005DA4D5 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D292799C1BD7BECB005DA4D5 /* ListTableViewController.swift */; };
+		D29279A01BD7BEE5005DA4D5 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D292799E1BD7BEE5005DA4D5 /* ListTableViewCell.swift */; };
+		D29279A11BD7BEE5005DA4D5 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D292799F1BD7BEE5005DA4D5 /* ListTableViewCell.xib */; };
+		D29279A91BD7C02B005DA4D5 /* actionChooser_Button.png in Resources */ = {isa = PBXBuildFile; fileRef = D29279A61BD7C02B005DA4D5 /* actionChooser_Button.png */; };
+		D29279AA1BD7C02B005DA4D5 /* OGActionChooser.m in Sources */ = {isa = PBXBuildFile; fileRef = D29279A81BD7C02B005DA4D5 /* OGActionChooser.m */; };
+		D2A46F941BE3C32000BAF492 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2A46F931BE3C32000BAF492 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		D29279A61BD7C02B005DA4D5 /* actionChooser_Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = actionChooser_Button.png; sourceTree = "<group>"; };
 		D29279A71BD7C02B005DA4D5 /* OGActionChooser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGActionChooser.h; sourceTree = "<group>"; };
 		D29279A81BD7C02B005DA4D5 /* OGActionChooser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGActionChooser.m; sourceTree = "<group>"; };
+		D2A46F931BE3C32000BAF492 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2A46F941BE3C32000BAF492 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				8B97795F1BCA6DB200FF54D4 /* TravelJP */,
+				D2A46F951BE3CE4E00BAF492 /* Frameworks */,
 				8B9779741BCA6DB200FF54D4 /* TravelJPTests */,
 				8B97797F1BCA6DB200FF54D4 /* TravelJPUITests */,
 				8B97795E1BCA6DB200FF54D4 /* Products */,
@@ -189,6 +193,14 @@
 				D292799F1BD7BEE5005DA4D5 /* ListTableViewCell.xib */,
 			);
 			name = addfile;
+			sourceTree = "<group>";
+		};
+		D2A46F951BE3CE4E00BAF492 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2A46F931BE3C32000BAF492 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

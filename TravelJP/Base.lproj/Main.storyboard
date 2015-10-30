@@ -61,7 +61,7 @@
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="addCell" destination="BYZ-38-t0r" eventType="touchUpInside" id="I3P-AD-Ryi"/>
+                                    <segue destination="2cB-ks-rx4" kind="modal" id="NAq-pR-D1B"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -88,21 +88,56 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6KM-vd-ts6">
-                                <rect key="frame" x="69" y="57" width="30" height="30"/>
+                                <rect key="frame" x="20" y="20" width="87" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
                                     <segue destination="5px-1H-yJ2" kind="unwind" unwindAction="returnViewController:" id="K7Y-bk-KS0"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="緯度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XwH-wU-yZo">
+                                <rect key="frame" x="131" y="70" width="166" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="経度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h6q-VX-Kxp">
+                                <rect key="frame" x="131" y="108" width="166" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="現在地：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="a1I-4o-cZc">
+                                <rect key="frame" x="40" y="94" width="83" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aUt-Je-P2w">
+                                <rect key="frame" x="35" y="128" width="67" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="取得"/>
+                                <connections>
+                                    <action selector="get" destination="5ex-FE-H40" eventType="touchUpInside" id="raX-tm-kg2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="ido" destination="XwH-wU-yZo" id="jtu-EO-OoA"/>
+                        <outlet property="keido" destination="h6q-VX-Kxp" id="yRf-5e-R9X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ks-qU-5Xt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="5px-1H-yJ2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="888.5" y="-102.5"/>
+            <point key="canvasLocation" x="864.5" y="-96.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fMf-Fl-fOc">
@@ -306,4 +341,7 @@
     <resources>
         <image name="map.png" width="881" height="583"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="NAq-pR-D1B"/>
+    </inferredMetricsTieBreakers>
 </document>
