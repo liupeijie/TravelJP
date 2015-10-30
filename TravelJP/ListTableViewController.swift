@@ -13,7 +13,7 @@ class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIA
     var spotArray: [AnyObject] = []//ユーザーデフォルトから取る配列
     var spotArray2: [AnyObject] = []
     var spotArray3: [AnyObject] = []
-    //Sectionで使用する配列を定義
+    //Sectionで使用する配列を定義//
     let sectionTitleKanto: NSMutableArray = ["東京都","千葉県","神奈川県"]
     let sectionTitleHokkaido: NSMutableArray = ["札幌","旭川","函館"]
     let sectionTitleOkinawa: NSMutableArray = ["沖縄県"]
