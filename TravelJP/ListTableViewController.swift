@@ -14,13 +14,24 @@ class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIA
     var spotArray2: [AnyObject] = []
     var spotArray3: [AnyObject] = []
     //Sectionで使用する配列を定義
-    let sectionTitle: NSMutableArray = ["東京都","千葉県","神奈川県"]
+    let sectionTitleKanto: NSMutableArray = ["東京都","千葉県","神奈川県"]
+    let sectionTitleHokkaido: NSMutableArray = ["札幌","旭川","函館"]
+    let sectionTitleOkinawa: NSMutableArray = ["沖縄県"]
+    //===========================================================関東=========
     let tokyo = ["東京スカイツリー", "東京タワー", "渋谷","more"]
     let chiba = ["ディズニー", "幕張", "船橋","more"]
     let kanagawa = ["中華街", "赤レンガ倉庫", "江ノ島","more"]
+    //===========================================================北海道=========
+    let sapporo = ["札幌1", "札幌2", "札幌3","more"]
+    let asahikawa = ["旭川1", "旭川2", "旭川3","more"]
+    let hakodate = ["函館1", "函館2", "函館3","more"]
+    //===========================================================沖縄=========
+    let okinawa = ["沖縄1", "沖縄2", "沖縄3","more"]
+    //====================================================================
     var fileName: NSMutableArray!
     var fileCount: Int!
     var spotName: String!
+    var prefectureNumber = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +44,7 @@ class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIA
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         fileName = appDelegate.ViewVal //fileNameにStringの値を引き渡す
         fileCount = appDelegate.ViewVal2
+        prefectureNumber = appDelegate.ViewVal4
         //=======================================================
         
         //ユーザーデフォルトリロード
@@ -57,13 +69,29 @@ class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIA
     // MARK: - Table view data source
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return sectionTitle.count
+        if(prefectureNumber == 1){//--------------------------北海道
+            return sectionTitleHokkaido.count
+        }else if(prefectureNumber == 2){//--------------------関東
+            return sectionTitleKanto.count
+        }else if(prefectureNumber == 3){//--------------------沖縄
+            return sectionTitleOkinawa.count
+        }else{
+            return 0//ダミー
+        }
     }
     
     
     //===============================================セクションのタイトルを返す
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sectionTitle[section] as? String
+        if(prefectureNumber == 1){//--------------------------北海道
+            return sectionTitleHokkaido[section] as? String
+        }else if(prefectureNumber == 2){//--------------------関東
+            return sectionTitleKanto[section] as? String
+        }else if(prefectureNumber == 3){//--------------------沖縄
+            return sectionTitleOkinawa[section] as? String
+        }else{
+            return ""//ダミー
+        }
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -78,14 +106,27 @@ class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIA
         //        cell.label1.text = nowIndexPathDictionary["english"] as? String
         //        cell.label2.text = nowIndexPathDictionary["japanese"] as? String
         
-        if(indexPath.section == 0){//==========================indexPath.sectionはセクション番号
-            cell.label2.text = tokyo[indexPath.row]
-        }else if(indexPath.section == 1){
-            cell.label2.text = chiba[indexPath.row]
-        }else if(indexPath.section == 2){
-            cell.label2.text = kanagawa[indexPath.row]
+        if(prefectureNumber == 1){//--------------------------北海道
+            if(indexPath.section == 0){//==========================indexPath.sectionはセクション番号
+                cell.label2.text = sapporo[indexPath.row]
+            }else if(indexPath.section == 1){
+                cell.label2.text = asahikawa[indexPath.row]
+            }else if(indexPath.section == 2){
+                cell.label2.text = hakodate[indexPath.row]
+            }
+        }else if(prefectureNumber == 2){//--------------------関東
+            if(indexPath.section == 0){
+                cell.label2.text = tokyo[indexPath.row]
+            }else if(indexPath.section == 1){
+                cell.label2.text = chiba[indexPath.row]
+            }else if(indexPath.section == 2){
+                cell.label2.text = kanagawa[indexPath.row]
+            }
+        }else if(prefectureNumber == 3){//--------------------沖縄
+            if(indexPath.section == 0){
+                cell.label2.text = okinawa[indexPath.row]
+            }
         }
-        
         return cell
     }
     
@@ -96,12 +137,26 @@ class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIA
         if(indexPath.row < 3){
             
 //==================================================================================
-            if(indexPath.section == 0){//==========================indexPath.sectionはセクション番号
-                spotName = tokyo[indexPath.row]//spotNameに観光地名を一時的に保存
-            }else if(indexPath.section == 1){
-                spotName = chiba[indexPath.row]
-            }else if(indexPath.section == 2){
-                spotName = kanagawa[indexPath.row]
+            if(prefectureNumber == 1){//--------------------------北海道
+                if(indexPath.section == 0){//==========================indexPath.sectionはセクション番号
+                    spotName = sapporo[indexPath.row]//spotNameに観光地名を一時的に保存
+                }else if(indexPath.section == 1){
+                    spotName = asahikawa[indexPath.row]
+                }else if(indexPath.section == 2){
+                    spotName = hakodate[indexPath.row]
+                }
+            }else if(prefectureNumber == 2){//--------------------関東
+                if(indexPath.section == 0){
+                    spotName = tokyo[indexPath.row]
+                }else if(indexPath.section == 1){
+                    spotName = chiba[indexPath.row]
+                }else if(indexPath.section == 2){
+                    spotName = kanagawa[indexPath.row]
+                }
+            }else if(prefectureNumber == 3){//--------------------沖縄
+                if(indexPath.section == 0){
+                    spotName = okinawa[indexPath.row]
+                }
             }
 //            print("観光地名：\(spotName)")
 //==================================================================================

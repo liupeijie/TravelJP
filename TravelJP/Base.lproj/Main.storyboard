@@ -181,12 +181,67 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g4R-vq-nni">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g4R-vq-nni" userLabel="関東">
                                 <rect key="frame" x="290" y="340" width="65" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
+                                <state key="normal" title="Button"/>
                                 <connections>
+                                    <action selector="kanto" destination="Tdl-ST-lgh" eventType="touchUpInside" id="9Vr-JW-2IO"/>
                                     <segue destination="2cB-ks-rx4" kind="modal" id="X7f-BY-jOD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iwP-B9-ciQ" userLabel="九州">
+                                <rect key="frame" x="22" y="312" width="65" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Fk1-1Q-WHc" userLabel="信越北陸">
+                                <rect key="frame" x="223" y="312" width="65" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RMk-Ng-3KY" userLabel="東海">
+                                <rect key="frame" x="223" y="362" width="65" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uoH-GT-rfR" userLabel="近畿">
+                                <rect key="frame" x="156" y="312" width="65" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uWs-pw-qNj" userLabel="中国">
+                                <rect key="frame" x="90" y="312" width="65" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Elx-yN-pKg" userLabel="四国">
+                                <rect key="frame" x="90" y="368" width="65" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AtS-kW-wZL" userLabel="沖縄">
+                                <rect key="frame" x="22" y="407" width="65" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="okinawa" destination="Tdl-ST-lgh" eventType="touchUpInside" id="Vpg-35-QGT"/>
+                                    <segue destination="2cB-ks-rx4" kind="modal" id="2ij-OK-9cR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xYc-sa-IDI" userLabel="東北">
+                                <rect key="frame" x="290" y="248" width="64" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="r3e-9P-wuQ" userLabel="北海道">
+                                <rect key="frame" x="260" y="174" width="93" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="hokaido" destination="Tdl-ST-lgh" eventType="touchUpInside" id="hda-Yk-olC"/>
+                                    <segue destination="2cB-ks-rx4" kind="modal" id="DDT-uI-Yv5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -344,5 +399,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="CIk-jT-AOo"/>
+        <segue reference="X7f-BY-jOD"/>
     </inferredMetricsTieBreakers>
 </document>
