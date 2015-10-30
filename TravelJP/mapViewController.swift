@@ -25,8 +25,8 @@ class mapViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func return2 (segue: UIStoryboardSegue) {
-    }
+//    @IBAction func return2 (segue: UIStoryboardSegue) {
+//    }
 
     /*
     // MARK: - Navigation
