@@ -122,7 +122,7 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         //ルート作成ボタンのメソット
     }
     
-    @IBAction func return1 (segue: UIStoryboardSegue) {
+    @IBAction func returnViewController (segue: UIStoryboardSegue) {
     }
     
     

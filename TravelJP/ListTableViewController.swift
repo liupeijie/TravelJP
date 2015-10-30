@@ -136,6 +136,10 @@ class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIA
             acSheet.presentInView(tableView.superview)
             //=========================================================
         }
+        
+        if let indexPath = tableView.indexPathForSelectedRow {//=======セル選択解除==
+            tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        }
     }
     
     //    override func tableView(tableView: UITableView,canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool

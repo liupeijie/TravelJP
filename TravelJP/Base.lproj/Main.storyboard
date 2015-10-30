@@ -25,8 +25,7 @@
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="makeRoot" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yo6-b4-vmB"/>
-                                    <segue destination="dNX-PF-QMa" kind="modal" id="CPV-Tf-TPV"/>
+                                    <segue destination="5ex-FE-H40" kind="modal" id="NUy-cC-qva"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="お気に入りスポット一覧：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b1L-gB-Igs">
@@ -81,41 +80,29 @@
             <point key="canvasLocation" x="393.5" y="-96.5"/>
         </scene>
         <!--Add View Controller-->
-        <scene sceneID="0Kf-vY-WXG">
+        <scene sceneID="3FQ-zD-3Sy">
             <objects>
-                <viewController id="dNX-PF-QMa" customClass="AddViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="1Fw-PK-Hu5">
+                <viewController id="5ex-FE-H40" customClass="AddViewController" customModule="TravelJP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mSB-YD-IdH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="画面2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oLQ-UD-4Ng">
-                                <rect key="frame" x="165" y="69" width="44" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6KM-vd-ts6">
+                                <rect key="frame" x="69" y="57" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="U6b-Xm-ety">
-                                <rect key="frame" x="165" y="215" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <animations/>
                                 <state key="normal" title="戻る"/>
                                 <connections>
-                                    <segue destination="Uvq-qZ-Znz" kind="unwind" unwindAction="return1:" id="VKY-bc-7JG"/>
+                                    <segue destination="5px-1H-yJ2" kind="unwind" unwindAction="returnViewController:" id="K7Y-bk-KS0"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OnF-3W-avB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Uvq-qZ-Znz" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ks-qU-5Xt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="5px-1H-yJ2" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="930.5" y="-96.5"/>
+            <point key="canvasLocation" x="888.5" y="-102.5"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fMf-Fl-fOc">
