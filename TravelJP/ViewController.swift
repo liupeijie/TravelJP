@@ -96,8 +96,8 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         if editingStyle == UITableViewCellEditingStyle.Delete {
             print("削除")
             
-            // 指定されたセルのオブジェクトをmyItemsから削除する.
-//            items.removeObjectAtIndex(indexPath.row)
+//            spotArray.removeAtIndex(indexPath.row)
+//            saveData.setObject(spotArray, forKey: "file1Key")
             
             // TableViewを再読み込み.
             tableView.reloadData()

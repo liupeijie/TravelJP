@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreLocation
 
-class AddViewController: UIViewController, CLLocationManagerDelegate {
+class AddViewController: UIViewController, CLLocationManagerDelegate, UISearchBarDelegate {
     var locMgr:CLLocationManager!
     
     let saveData = NSUserDefaults.standardUserDefaults()
@@ -21,6 +21,10 @@ class AddViewController: UIViewController, CLLocationManagerDelegate {
     var i = 0
     @IBOutlet var ido: UILabel!
     @IBOutlet var keido: UILabel!
+    
+    @IBOutlet var spot1lbl: UILabel!
+    @IBOutlet var spot1ido: UILabel!
+    @IBOutlet var spot1keido: UILabel!
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -106,6 +110,20 @@ class AddViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func get(){
         // 現在位置の取得を開始.
         locMgr.startUpdatingLocation()
+        // 目的地の文字列から座標検索
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(spotArray[0] as! String, completionHandler: {(placeMarks: [CLPlacemark]?, error: NSError?) -> Void in
+            if let placemark = placeMarks?[0]{
+                // 地名を入力して検索リストに有れば緯度経度を取得
+                print(placemark.location!.coordinate.latitude, placemark.location!.coordinate.longitude)
+                self.spot1lbl.text = self.spotArray[0] as? String
+                self.spot1ido.text = "緯度：\(placemark.location!.coordinate.latitude)"
+                self.spot1keido.text = "経度：\(placemark.location!.coordinate.longitude)"
+            } else {
+                // 検索リストに無ければ
+                print("存在しません")
+            }
+        })
     }
     
     
