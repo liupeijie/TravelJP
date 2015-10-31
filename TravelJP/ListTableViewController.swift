@@ -14,9 +14,9 @@ class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIA
     var spotArray2: [AnyObject] = []
     var spotArray3: [AnyObject] = []
     //Sectionで使用する配列を定義//
-    let sectionTitleKanto: NSMutableArray = ["東京都","千葉県","神奈川県"]
-    let sectionTitleHokkaido: NSMutableArray = ["札幌","旭川","函館"]
-    let sectionTitleOkinawa: NSMutableArray = ["沖縄県"]
+    let sectionTitleKanto = ["東京都","千葉県","神奈川県"]
+    let sectionTitleHokkaido = ["札幌","旭川","函館"]
+    let sectionTitleOkinawa = ["沖縄県"]
     //===========================================================関東=========
     let tokyo = ["東京スカイツリー", "東京タワー", "渋谷","more"]
     let chiba = ["ディズニー", "幕張", "船橋","more"]
@@ -84,11 +84,11 @@ class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIA
     //===============================================セクションのタイトルを返す
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if(prefectureNumber == 1){//--------------------------北海道
-            return sectionTitleHokkaido[section] as? String
+            return sectionTitleHokkaido[section]
         }else if(prefectureNumber == 2){//--------------------関東
-            return sectionTitleKanto[section] as? String
+            return sectionTitleKanto[section]
         }else if(prefectureNumber == 3){//--------------------沖縄
-            return sectionTitleOkinawa[section] as? String
+            return sectionTitleOkinawa[section]
         }else{
             return ""//ダミー
         }

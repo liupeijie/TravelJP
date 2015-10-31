@@ -15,9 +15,6 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     var spotArray3: [AnyObject] = []
     var fileNumber = 0
     @IBOutlet var tableView: UITableView!
-
-    //テーブルに表示するセル配列
-//    let items: NSMutableArray = ["TEST1", "TEST2", "TEST3"]
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)

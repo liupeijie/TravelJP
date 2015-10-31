@@ -123,7 +123,7 @@ class planViewController: UIViewController, UITableViewDataSource, UITableViewDe
             print("削除")
             
             // 指定されたセルのオブジェクトをmyItemsから削除する.
-            //label2Array.removeObjectAtIndex(indexPath.row)
+            label2Array.removeAtIndex(indexPath.row)
             self.saveData.setObject(self.label2Array, forKey: "fileName")
             
             // TableViewを再読み込み.
