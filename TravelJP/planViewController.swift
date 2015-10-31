@@ -12,6 +12,10 @@ class planViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet var table:UITableView!
     let saveData = NSUserDefaults.standardUserDefaults()
     var label2Array: [AnyObject] = []//ファイルのタイトル
+    var spotArray: [AnyObject] = []
+    var spotArray2: [AnyObject] = []
+    var spotArray3: [AnyObject] = []
+    
     var fileNumber = 0
 
     override func viewDidLoad() {
@@ -59,10 +63,18 @@ class planViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
 
     override func viewWillAppear(animated: Bool) {
-//        label2Array.removeAllObjects()
-//        saveData.removeObjectForKey("fileName")
         if (saveData.objectForKey("fileName") != nil ){
             label2Array = saveData.objectForKey("fileName") as! Array
+        }
+        //ユーザーデフォルトリロード
+        if saveData.objectForKey("file1Key") != nil {
+            spotArray = saveData.objectForKey("file1Key") as! Array
+        }
+        if saveData.objectForKey("file2Key") != nil {
+            spotArray2 = saveData.objectForKey("file2Key") as! Array
+        }
+        if saveData.objectForKey("file3Key") != nil {
+            spotArray3 = saveData.objectForKey("file3Key") as! Array
         }
         
         //画面遷移を行って、また元の画面に戻ってきた際に、セルの選択状態を解除するコード
@@ -122,9 +134,21 @@ class planViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if editingStyle == UITableViewCellEditingStyle.Delete {
             print("削除")
             
-            // 指定されたセルのオブジェクトをmyItemsから削除する.
+            // 指定されたセルのオブジェクトを削除する.
             label2Array.removeAtIndex(indexPath.row)
             self.saveData.setObject(self.label2Array, forKey: "fileName")
+            if(indexPath.row == 0){
+                print("0です")
+                spotArray.removeAll()
+                saveData.removeObjectForKey("file1Key")
+            }else if(indexPath.row == 1){
+                spotArray2.removeAll()
+                saveData.removeObjectForKey("file2Key")
+            }else if(indexPath.row == 2){
+                spotArray3.removeAll()
+                saveData.removeObjectForKey("file3Key")
+            }
+            
             
             // TableViewを再読み込み.
             table.reloadData()
