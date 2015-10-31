@@ -164,7 +164,7 @@ class planViewController: UIViewController, UITableViewDataSource, UITableViewDe
         saveData.removeObjectForKey("fileName")
         label2Array.removeAll()
         self.table.reloadData()
-
+//
     }
 
 }
