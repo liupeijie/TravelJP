@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -367,11 +368,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Plan一覧" id="jd5-eI-5ap">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dUC-Bo-RJJ">
-                            <connections>
-                                <action selector="AddFileButton:" destination="W0r-gZ-vKu" id="v5c-CO-12j"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="dUC-Bo-RJJ">
+                                <connections>
+                                    <action selector="AddFileButton:" destination="W0r-gZ-vKu" id="v5c-CO-12j"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="edit" id="Mst-0J-JV8">
+                                <connections>
+                                    <action selector="editbutton:" destination="W0r-gZ-vKu" id="Frc-cJ-RRp"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -381,7 +389,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9tY-0d-qwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-114.5" y="-96.5"/>
+            <point key="canvasLocation" x="-147.5" y="-101.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="McZ-kx-xch">

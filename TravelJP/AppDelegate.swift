@@ -14,11 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 //==============================================値渡しのための配列を用意(fileName用)
-    private var viewVal: NSMutableArray!
+    private var viewVal: [AnyObject] = []
     private var viewVal2: Int!
     private var viewVal3: Int!
     private var viewVal4: Int!
-    var ViewVal: NSMutableArray {//※値が整数型の場合はInt
+    var ViewVal: [AnyObject] {//※値が整数型の場合はInt
         get {
             return viewVal //値を受け取る側にviewValを返す。
         }

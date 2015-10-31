@@ -28,7 +28,7 @@ class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIA
     //===========================================================沖縄=========
     let okinawa = ["沖縄1", "沖縄2", "沖縄3","more"]
     //====================================================================
-    var fileName: NSMutableArray!
+    var fileName: [AnyObject] = []
     var fileCount: Int!
     var spotName: String!
     var prefectureNumber = 0
