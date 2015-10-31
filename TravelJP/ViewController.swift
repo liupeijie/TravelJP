@@ -15,9 +15,6 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     var spotArray3: [AnyObject] = []
     var fileNumber = 0
     @IBOutlet var tableView: UITableView!
-
-    //テーブルに表示するセル配列
-//    let items: NSMutableArray = ["TEST1", "TEST2", "TEST3"]
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -96,14 +93,11 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
         if editingStyle == UITableViewCellEditingStyle.Delete {
             print("削除")
             
-            // 指定されたセルのオブジェクトをmyItemsから削除する.
-       //    spotArray.removeObjectAtIndex(indexPath.row)
-            spotArray.removeAll()
-            spotArray2.removeAll()
-            spotArray3.removeAll()
-            saveData.removeObjectForKey("file1Key")
-            saveData.removeObjectForKey("file2Key")
-            saveData.removeObjectForKey("file3Key")
+
+//            spotArray.removeAtIndex(indexPath.row)
+//            saveData.setObject(spotArray, forKey: "file1Key")
+            
+
             // TableViewを再読み込み.
             tableView.reloadData()
         }

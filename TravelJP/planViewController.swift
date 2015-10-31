@@ -10,7 +10,14 @@ import UIKit
 
 class planViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,OGActionChooserDelegate {
     @IBOutlet var table:UITableView!
-    let label2Array: NSMutableArray = ["新規ファイル1","b","c","d"]//ファイルのタイトル
+
+    let saveData = NSUserDefaults.standardUserDefaults()
+    var label2Array: [AnyObject] = []//ファイルのタイトル
+    var spotArray: [AnyObject] = []
+    var spotArray2: [AnyObject] = []
+    var spotArray3: [AnyObject] = []
+    
+
     var fileNumber = 0
 
     override func viewDidLoad() {
@@ -56,8 +63,23 @@ class planViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
 
-//画面遷移を行って、また元の画面に戻ってきた際に、セルの選択状態を解除するコード
+
     override func viewWillAppear(animated: Bool) {
+        if (saveData.objectForKey("fileName") != nil ){
+            label2Array = saveData.objectForKey("fileName") as! Array
+        }
+        //ユーザーデフォルトリロード
+        if saveData.objectForKey("file1Key") != nil {
+            spotArray = saveData.objectForKey("file1Key") as! Array
+        }
+        if saveData.objectForKey("file2Key") != nil {
+            spotArray2 = saveData.objectForKey("file2Key") as! Array
+        }
+        if saveData.objectForKey("file3Key") != nil {
+            spotArray3 = saveData.objectForKey("file3Key") as! Array
+        }
+        
+        //画面遷移を行って、また元の画面に戻ってきた際に、セルの選択状態を解除するコード
         if let indexPath = table.indexPathForSelectedRow {
             table.deselectRowAtIndexPath(indexPath, animated: true)
         }
@@ -84,19 +106,22 @@ class planViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let actionCancel = UIAlertAction(title: "Cancel", style: .Default, handler:nil)
         alert.addAction(actionCancel)
         
-//        alert.addAction(UIAlertAction(title: "登録", style: UIAlertActionStyle.Default, handler: nil))
+
+        //        alert.addAction(UIAlertAction(title: "登録", style: UIAlertActionStyle.Default, handler: nil))
         let actionOK = UIAlertAction(title: "OK", style: .Default, handler:{
-                (action:UIAlertAction!) -> Void in
-                let textFields:Array<UITextField>? =  alert.textFields as Array<UITextField>?
-                if textFields != nil {
-                    for textField:UITextField in textFields! {
-                        //各textにアクセス
-                        print(textField.text)
-                        let Field2 = alert.textFields![0] as UITextField
-                        self.label2Array.addObject(Field2.text!)
-                        self.table.reloadData()
-                    }
+            (action:UIAlertAction!) -> Void in
+            let textFields:Array<UITextField>? =  alert.textFields as Array<UITextField>?
+            if textFields != nil {
+                for textField:UITextField in textFields! {
+                    //各textにアクセス
+                    print(textField.text)
+                    let Field2 = alert.textFields![0] as UITextField
+                    self.label2Array.append(Field2.text!)
+                    self.saveData.setObject(self.label2Array, forKey: "fileName")
+                    self.table.reloadData()
                 }
+            }
+
         })
         alert.addAction(actionOK)
         
@@ -104,20 +129,8 @@ class planViewController: UIViewController, UITableViewDataSource, UITableViewDe
             textField.placeholder = "Enter text:"
             
         })
-        self.presentViewController(alert, animated: true, completion: nil)
-        
-        
-       // self.presentViewController(alert, animated: true) {
-  //  let textField2 = alert.textFields![0] as UITextField
-   //     print(textField2)
-//        if textField == "Enter text:" {
-         //   print(textField2.text)
-//            self.label2Array.addObject(textField.text!)
-//        
-//       //self.label2Array.addObject("textField.text!")
-//        // TableViewを再読み込み.
-//            self.table.reloadData()
-//       }
+
+        self.presentViewController(alert, animated: true, completion: nil)        
 
     }
     
@@ -127,13 +140,40 @@ class planViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if editingStyle == UITableViewCellEditingStyle.Delete {
             print("削除")
             
-            // 指定されたセルのオブジェクトをmyItemsから削除する.
-            label2Array.removeObjectAtIndex(indexPath.row)
+
+            // 指定されたセルのオブジェクトを削除する.
+            label2Array.removeAtIndex(indexPath.row)
+            self.saveData.setObject(self.label2Array, forKey: "fileName")
+            if(indexPath.row+1 == 1){
+                print("0です")
+                spotArray.removeAll()
+                saveData.removeObjectForKey("file1Key")
+            }else if(indexPath.row+1 == 2){
+                spotArray2.removeAll()
+                saveData.removeObjectForKey("file2Key")
+            }else if(indexPath.row+1 == 3){
+                spotArray3.removeAll()
+                saveData.removeObjectForKey("file3Key")
+            }
+            
             
             // TableViewを再読み込み.
             table.reloadData()
         }
     }
-    
+
+    @IBAction func editbutton(sender: AnyObject) {
+        spotArray.removeAll()
+        spotArray2.removeAll()
+        spotArray3.removeAll()
+        saveData.removeObjectForKey("file1Key")
+        saveData.removeObjectForKey("file2Key")
+        saveData.removeObjectForKey("file3Key")
+        saveData.removeObjectForKey("fileName")
+        label2Array.removeAll()
+        self.table.reloadData()
+//
+    }
+
 
 }

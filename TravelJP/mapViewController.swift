@@ -9,6 +9,7 @@
 import UIKit
 
 class mapViewController: UIViewController {
+    var prefectureNumber = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +18,13 @@ class mapViewController: UIViewController {
     }
 
     @IBAction func hokaido() {
-        
+        prefectureNumber = 1
+    }
+    @IBAction func kanto() {
+        prefectureNumber = 2
+    }
+    @IBAction func okinawa() {
+        prefectureNumber = 3
     }
     
     override func didReceiveMemoryWarning() {
@@ -25,17 +32,11 @@ class mapViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-//    @IBAction func return2 (segue: UIStoryboardSegue) {
-//    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //==========================================================================値渡しのためのもの
+    override func viewWillDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        appDelegate.ViewVal4 = prefectureNumber //Stringの値を引き渡す(ポインタ)
     }
-    */
 
 }
