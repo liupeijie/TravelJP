@@ -129,9 +129,8 @@ class planViewController: UIViewController, UITableViewDataSource, UITableViewDe
             textField.placeholder = "Enter text:"
             
         })
-
+        
         self.presentViewController(alert, animated: true, completion: nil)        
-
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -174,6 +173,5 @@ class planViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.table.reloadData()
 //
     }
-
 
 }
