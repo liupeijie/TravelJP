@@ -10,7 +10,7 @@ import UIKit
 
 class planViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet var table:UITableView!
-    let label2Array: NSMutableArray = ["a","b","c","d"]//ファイルのタイトル
+    let label2Array: NSMutableArray = []//ファイルのタイトル
     var fileNumber = 0
 
     override func viewDidLoad() {
@@ -74,6 +74,65 @@ class planViewController: UIViewController, UITableViewDataSource, UITableViewDe
         appDelegate.ViewVal = label2Array //Stringの値を引き渡す(ポインタ)
         appDelegate.ViewVal2 = label2Array.count
         appDelegate.ViewVal3 = fileNumber
+    }
+    
+    //add files or delete files
+    
+    @IBAction func AddFileButton(sender: AnyObject) {
+        let alert = UIAlertController(title: "新規ファイル", message: "名前を入力してください", preferredStyle: UIAlertControllerStyle.Alert)
+        // キャンセルボタン
+        let actionCancel = UIAlertAction(title: "Cancel", style: .Default, handler:nil)
+        alert.addAction(actionCancel)
+        
+        //        alert.addAction(UIAlertAction(title: "登録", style: UIAlertActionStyle.Default, handler: nil))
+        let actionOK = UIAlertAction(title: "OK", style: .Default, handler:{
+            (action:UIAlertAction!) -> Void in
+            let textFields:Array<UITextField>? =  alert.textFields as Array<UITextField>?
+            if textFields != nil {
+                for textField:UITextField in textFields! {
+                    //各textにアクセス
+                    print(textField.text)
+                    let Field2 = alert.textFields![0] as UITextField
+                    self.label2Array.addObject(Field2.text!)
+                    self.table.reloadData()
+                }
+            }
+        })
+        alert.addAction(actionOK)
+        
+        alert.addTextFieldWithConfigurationHandler({(textField: UITextField!) in
+            textField.placeholder = "Enter text:"
+            
+        })
+        self.presentViewController(alert, animated: true, completion: nil)
+        
+        
+        // self.presentViewController(alert, animated: true) {
+        //  let textField2 = alert.textFields![0] as UITextField
+        //     print(textField2)
+        //        if textField == "Enter text:" {
+        //   print(textField2.text)
+        //            self.label2Array.addObject(textField.text!)
+        //
+        //       //self.label2Array.addObject("textField.text!")
+        //        // TableViewを再読み込み.
+        //            self.table.reloadData()
+        //       }
+        
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        // 削除のとき.
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            print("削除")
+            
+            // 指定されたセルのオブジェクトをmyItemsから削除する.
+            label2Array.removeObjectAtIndex(indexPath.row)
+            
+            // TableViewを再読み込み.
+            table.reloadData()
+        }
     }
 
 }

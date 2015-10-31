@@ -291,7 +291,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="70" id="TGd-lS-Ntq">
-                                <rect key="frame" x="0.0" y="92" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TGd-lS-Ntq" id="lXc-gt-mbI">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="69"/>
@@ -367,7 +367,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Plan一覧" id="jd5-eI-5ap">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dUC-Bo-RJJ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dUC-Bo-RJJ">
+                            <connections>
+                                <action selector="AddFileButton:" destination="W0r-gZ-vKu" id="v5c-CO-12j"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>

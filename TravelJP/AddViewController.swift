@@ -122,6 +122,7 @@ class AddViewController: UIViewController, CLLocationManagerDelegate, UISearchBa
             } else {
                 // 検索リストに無ければ
                 print("存在しません")
+                self.spot1lbl.text = "存在しまへん"
             }
         })
     }
