@@ -137,14 +137,14 @@ class planViewController: UIViewController, UITableViewDataSource, UITableViewDe
             // 指定されたセルのオブジェクトを削除する.
             label2Array.removeAtIndex(indexPath.row)
             self.saveData.setObject(self.label2Array, forKey: "fileName")
-            if(indexPath.row == 0){
+            if(indexPath.row+1 == 1){
                 print("0です")
                 spotArray.removeAll()
                 saveData.removeObjectForKey("file1Key")
-            }else if(indexPath.row == 1){
+            }else if(indexPath.row+1 == 2){
                 spotArray2.removeAll()
                 saveData.removeObjectForKey("file2Key")
-            }else if(indexPath.row == 2){
+            }else if(indexPath.row+1 == 3){
                 spotArray3.removeAll()
                 saveData.removeObjectForKey("file3Key")
             }
@@ -155,7 +155,16 @@ class planViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     @IBAction func editbutton(sender: AnyObject) {
-        
+        spotArray.removeAll()
+        spotArray2.removeAll()
+        spotArray3.removeAll()
+        saveData.removeObjectForKey("file1Key")
+        saveData.removeObjectForKey("file2Key")
+        saveData.removeObjectForKey("file3Key")
+        saveData.removeObjectForKey("fileName")
+        label2Array.removeAll()
+        self.table.reloadData()
+
     }
 
 }
