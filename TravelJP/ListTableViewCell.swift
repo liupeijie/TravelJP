@@ -9,7 +9,7 @@
 import UIKit
 
 class ListTableViewCell: UITableViewCell {
-    @IBOutlet var label1: UILabel!
+    @IBOutlet var spotimage: UIImageView!
     @IBOutlet var label2: UILabel!
 
     override func awakeFromNib() {

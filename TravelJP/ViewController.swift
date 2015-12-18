@@ -14,12 +14,14 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
     var spotArray2: [AnyObject] = []
     var spotArray3: [AnyObject] = []
     var fileNumber = 0
+    var fileName: [AnyObject] = []
     @IBOutlet var tableView: UITableView!
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         //=======================================================値受け取り
         let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        fileName = appDelegate.ViewVal
         fileNumber = appDelegate.ViewVal3
         print("fileNumber:\(fileNumber)")
         //=======================================================
@@ -36,11 +38,13 @@ class ViewController: UIViewController,UITableViewDelegate, UITableViewDataSourc
                 spotArray3 = saveData.objectForKey("file3Key") as! Array
             }
         }
+        self.navigationItem.title = fileName[fileNumber-1] as? String
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
         
         //テーブルビュー初期化、関連付け
         tableView.delegate      =   self
