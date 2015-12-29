@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8B03EF871BD3E43E0086E7AE /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 8B03EF861BD3E43E0086E7AE /* map.png */; };
 		8B3B18E71BD12F690085D7D5 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3B18E61BD12F690085D7D5 /* AddViewController.swift */; };
 		8B3B18E91BD14D160085D7D5 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3B18E81BD14D160085D7D5 /* TabViewController.swift */; };
 		8B3B18EB1BD14F100085D7D5 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3B18EA1BD14F100085D7D5 /* mapViewController.swift */; };
@@ -19,12 +18,53 @@
 		8B97796B1BCA6DB200FF54D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B9779691BCA6DB200FF54D4 /* LaunchScreen.storyboard */; };
 		8B9779761BCA6DB200FF54D4 /* TravelJPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9779751BCA6DB200FF54D4 /* TravelJPTests.swift */; };
 		8B9779811BCA6DB200FF54D4 /* TravelJPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9779801BCA6DB200FF54D4 /* TravelJPUITests.swift */; };
+		D212543F1BF36D99006C18B0 /* 中国.gif in Resources */ = {isa = PBXBuildFile; fileRef = D21254351BF36D99006C18B0 /* 中国.gif */; };
+		D21254401BF36D99006C18B0 /* 九州.gif in Resources */ = {isa = PBXBuildFile; fileRef = D21254361BF36D99006C18B0 /* 九州.gif */; };
+		D21254411BF36D99006C18B0 /* 信越北陸.gif in Resources */ = {isa = PBXBuildFile; fileRef = D21254371BF36D99006C18B0 /* 信越北陸.gif */; };
+		D21254431BF36D99006C18B0 /* 四国.gif in Resources */ = {isa = PBXBuildFile; fileRef = D21254391BF36D99006C18B0 /* 四国.gif */; };
+		D21254441BF36D99006C18B0 /* 東北.gif in Resources */ = {isa = PBXBuildFile; fileRef = D212543A1BF36D99006C18B0 /* 東北.gif */; };
+		D21254451BF36D99006C18B0 /* 東海.gif in Resources */ = {isa = PBXBuildFile; fileRef = D212543B1BF36D99006C18B0 /* 東海.gif */; };
+		D21254461BF36D99006C18B0 /* 沖縄.gif in Resources */ = {isa = PBXBuildFile; fileRef = D212543C1BF36D99006C18B0 /* 沖縄.gif */; };
+		D21254471BF36D99006C18B0 /* 近畿.gif in Resources */ = {isa = PBXBuildFile; fileRef = D212543D1BF36D99006C18B0 /* 近畿.gif */; };
+		D21254481BF36D99006C18B0 /* 関東.gif in Resources */ = {isa = PBXBuildFile; fileRef = D212543E1BF36D99006C18B0 /* 関東.gif */; };
+		D212544A1BF36E33006C18B0 /* 北海道.gif in Resources */ = {isa = PBXBuildFile; fileRef = D21254491BF36E33006C18B0 /* 北海道.gif */; };
+		D212544C1BF3753E006C18B0 /* actionChooser_Button.png in Resources */ = {isa = PBXBuildFile; fileRef = D212544B1BF3753E006C18B0 /* actionChooser_Button.png */; };
+		D23E83011C1AA5F100C1FE6C /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D23E82F71C1AA5F000C1FE6C /* Icon-60@2x.png */; };
+		D23E83021C1AA5F100C1FE6C /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D23E82F81C1AA5F000C1FE6C /* Icon-60@3x.png */; };
+		D23E83031C1AA5F100C1FE6C /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = D23E82F91C1AA5F000C1FE6C /* Icon-76.png */; };
+		D23E83041C1AA5F100C1FE6C /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D23E82FA1C1AA5F000C1FE6C /* Icon-76@2x.png */; };
+		D23E83051C1AA5F100C1FE6C /* Icon-Small-40.png in Resources */ = {isa = PBXBuildFile; fileRef = D23E82FB1C1AA5F000C1FE6C /* Icon-Small-40.png */; };
+		D23E83061C1AA5F100C1FE6C /* Icon-Small-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D23E82FC1C1AA5F000C1FE6C /* Icon-Small-40@2x.png */; };
+		D23E83071C1AA5F100C1FE6C /* Icon-Small-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D23E82FD1C1AA5F100C1FE6C /* Icon-Small-40@3x.png */; };
+		D23E83081C1AA5F100C1FE6C /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = D23E82FE1C1AA5F100C1FE6C /* Icon-Small.png */; };
+		D23E83091C1AA5F100C1FE6C /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D23E82FF1C1AA5F100C1FE6C /* Icon-Small@2x.png */; };
+		D23E830A1C1AA5F100C1FE6C /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D23E83001C1AA5F100C1FE6C /* Icon-Small@3x.png */; };
 		D292799D1BD7BECB005DA4D5 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D292799C1BD7BECB005DA4D5 /* ListTableViewController.swift */; };
 		D29279A01BD7BEE5005DA4D5 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D292799E1BD7BEE5005DA4D5 /* ListTableViewCell.swift */; };
 		D29279A11BD7BEE5005DA4D5 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D292799F1BD7BEE5005DA4D5 /* ListTableViewCell.xib */; };
-		D29279A91BD7C02B005DA4D5 /* actionChooser_Button.png in Resources */ = {isa = PBXBuildFile; fileRef = D29279A61BD7C02B005DA4D5 /* actionChooser_Button.png */; };
+		D29279A91BD7C02B005DA4D5 /* actionChooser_Button2.png in Resources */ = {isa = PBXBuildFile; fileRef = D29279A61BD7C02B005DA4D5 /* actionChooser_Button2.png */; };
 		D29279AA1BD7C02B005DA4D5 /* OGActionChooser.m in Sources */ = {isa = PBXBuildFile; fileRef = D29279A81BD7C02B005DA4D5 /* OGActionChooser.m */; };
 		D2A46F941BE3C32000BAF492 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2A46F931BE3C32000BAF492 /* CoreLocation.framework */; };
+		D2A977981BF4A56900CC4DB9 /* 背景.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A977971BF4A56900CC4DB9 /* 背景.png */; };
+		D2A9779A1BF4B34900CC4DB9 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A977991BF4B34900CC4DB9 /* map.png */; };
+		D2A9779C1BF4B44F00CC4DB9 /* map2.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A9779B1BF4B44F00CC4DB9 /* map2.png */; };
+		D2A9779E1BF4B4B600CC4DB9 /* List.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A9779D1BF4B4B600CC4DB9 /* List.png */; };
+		D2A977A01BF4B59400CC4DB9 /* list2.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A9779F1BF4B59400CC4DB9 /* list2.png */; };
+		D2A977A21BF4B5DB00CC4DB9 /* list4.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A977A11BF4B5DB00CC4DB9 /* list4.png */; };
+		D2A977A41BF4D6D600CC4DB9 /* スカイツリー.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A977A31BF4D6D600CC4DB9 /* スカイツリー.png */; };
+		D2A977A71BF4D87B00CC4DB9 /* 東京タワー.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2A977A51BF4D87B00CC4DB9 /* 東京タワー.jpg */; };
+		D2A977A81BF4D87B00CC4DB9 /* 東京タワー2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D2A977A61BF4D87B00CC4DB9 /* 東京タワー2.jpg */; };
+		D2A977AA1BF4DB0300CC4DB9 /* 中華街.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A977A91BF4DB0300CC4DB9 /* 中華街.png */; };
+		D2A977B41BF4DD9300CC4DB9 /* 渋谷2.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A977B31BF4DD9300CC4DB9 /* 渋谷2.png */; };
+		D2A977B61BF4DE9600CC4DB9 /* 渋谷3.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A977B51BF4DE9600CC4DB9 /* 渋谷3.png */; };
+		D2A977B81BF4DFE200CC4DB9 /* レンガ.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A977B71BF4DFE200CC4DB9 /* レンガ.png */; };
+		D2A977BA1BF4E18600CC4DB9 /* 江ノ電.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A977B91BF4E18600CC4DB9 /* 江ノ電.png */; };
+		D2A977BC1BF4E25B00CC4DB9 /* 江ノ電2.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A977BB1BF4E25B00CC4DB9 /* 江ノ電2.png */; };
+		D2A977BE1BF4E33200CC4DB9 /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A977BD1BF4E33200CC4DB9 /* more.png */; };
+		D2A977C01BF4E42700CC4DB9 /* ミッキー.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A977BF1BF4E42700CC4DB9 /* ミッキー.png */; };
+		D2A977C21BF4E9B400CC4DB9 /* シーワールド.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A977C11BF4E9B400CC4DB9 /* シーワールド.png */; };
+		D2A977C41BF4E9F900CC4DB9 /* マザー牧場.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A977C31BF4E9F900CC4DB9 /* マザー牧場.png */; };
+		D2A977C81BF4F5E100CC4DB9 /* 完成版2.png in Resources */ = {isa = PBXBuildFile; fileRef = D2A977C71BF4F5E100CC4DB9 /* 完成版2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +85,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8B03EF861BD3E43E0086E7AE /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
 		8B3B18E61BD12F690085D7D5 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		8B3B18E81BD14D160085D7D5 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		8B3B18EA1BD14F100085D7D5 /* mapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
@@ -63,14 +102,55 @@
 		8B97797C1BCA6DB200FF54D4 /* TravelJPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelJPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B9779801BCA6DB200FF54D4 /* TravelJPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelJPUITests.swift; sourceTree = "<group>"; };
 		8B9779821BCA6DB200FF54D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D21254351BF36D99006C18B0 /* 中国.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "中国.gif"; sourceTree = "<group>"; };
+		D21254361BF36D99006C18B0 /* 九州.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "九州.gif"; sourceTree = "<group>"; };
+		D21254371BF36D99006C18B0 /* 信越北陸.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "信越北陸.gif"; sourceTree = "<group>"; };
+		D21254391BF36D99006C18B0 /* 四国.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "四国.gif"; sourceTree = "<group>"; };
+		D212543A1BF36D99006C18B0 /* 東北.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "東北.gif"; sourceTree = "<group>"; };
+		D212543B1BF36D99006C18B0 /* 東海.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "東海.gif"; sourceTree = "<group>"; };
+		D212543C1BF36D99006C18B0 /* 沖縄.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "沖縄.gif"; sourceTree = "<group>"; };
+		D212543D1BF36D99006C18B0 /* 近畿.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "近畿.gif"; sourceTree = "<group>"; };
+		D212543E1BF36D99006C18B0 /* 関東.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "関東.gif"; sourceTree = "<group>"; };
+		D21254491BF36E33006C18B0 /* 北海道.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "北海道.gif"; sourceTree = "<group>"; };
+		D212544B1BF3753E006C18B0 /* actionChooser_Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = actionChooser_Button.png; sourceTree = "<group>"; };
+		D23E82F71C1AA5F000C1FE6C /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		D23E82F81C1AA5F000C1FE6C /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
+		D23E82F91C1AA5F000C1FE6C /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		D23E82FA1C1AA5F000C1FE6C /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		D23E82FB1C1AA5F000C1FE6C /* Icon-Small-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-40.png"; sourceTree = "<group>"; };
+		D23E82FC1C1AA5F000C1FE6C /* Icon-Small-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-40@2x.png"; sourceTree = "<group>"; };
+		D23E82FD1C1AA5F100C1FE6C /* Icon-Small-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-40@3x.png"; sourceTree = "<group>"; };
+		D23E82FE1C1AA5F100C1FE6C /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		D23E82FF1C1AA5F100C1FE6C /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		D23E83001C1AA5F100C1FE6C /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
 		D292799C1BD7BECB005DA4D5 /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		D292799E1BD7BEE5005DA4D5 /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		D292799F1BD7BEE5005DA4D5 /* ListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 		D29279A21BD7BFDE005DA4D5 /* TravelJP-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TravelJP-Bridging-Header.h"; sourceTree = "<group>"; };
-		D29279A61BD7C02B005DA4D5 /* actionChooser_Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = actionChooser_Button.png; sourceTree = "<group>"; };
+		D29279A61BD7C02B005DA4D5 /* actionChooser_Button2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = actionChooser_Button2.png; sourceTree = "<group>"; };
 		D29279A71BD7C02B005DA4D5 /* OGActionChooser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGActionChooser.h; sourceTree = "<group>"; };
 		D29279A81BD7C02B005DA4D5 /* OGActionChooser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OGActionChooser.m; sourceTree = "<group>"; };
 		D2A46F931BE3C32000BAF492 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D2A977971BF4A56900CC4DB9 /* 背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "背景.png"; sourceTree = "<group>"; };
+		D2A977991BF4B34900CC4DB9 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		D2A9779B1BF4B44F00CC4DB9 /* map2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map2.png; sourceTree = "<group>"; };
+		D2A9779D1BF4B4B600CC4DB9 /* List.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = List.png; sourceTree = "<group>"; };
+		D2A9779F1BF4B59400CC4DB9 /* list2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list2.png; sourceTree = "<group>"; };
+		D2A977A11BF4B5DB00CC4DB9 /* list4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list4.png; sourceTree = "<group>"; };
+		D2A977A31BF4D6D600CC4DB9 /* スカイツリー.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "スカイツリー.png"; sourceTree = "<group>"; };
+		D2A977A51BF4D87B00CC4DB9 /* 東京タワー.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "東京タワー.jpg"; sourceTree = "<group>"; };
+		D2A977A61BF4D87B00CC4DB9 /* 東京タワー2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "東京タワー2.jpg"; sourceTree = "<group>"; };
+		D2A977A91BF4DB0300CC4DB9 /* 中華街.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中華街.png"; sourceTree = "<group>"; };
+		D2A977B31BF4DD9300CC4DB9 /* 渋谷2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "渋谷2.png"; sourceTree = "<group>"; };
+		D2A977B51BF4DE9600CC4DB9 /* 渋谷3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "渋谷3.png"; sourceTree = "<group>"; };
+		D2A977B71BF4DFE200CC4DB9 /* レンガ.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "レンガ.png"; sourceTree = "<group>"; };
+		D2A977B91BF4E18600CC4DB9 /* 江ノ電.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "江ノ電.png"; sourceTree = "<group>"; };
+		D2A977BB1BF4E25B00CC4DB9 /* 江ノ電2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "江ノ電2.png"; sourceTree = "<group>"; };
+		D2A977BD1BF4E33200CC4DB9 /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more.png; sourceTree = "<group>"; };
+		D2A977BF1BF4E42700CC4DB9 /* ミッキー.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ミッキー.png"; sourceTree = "<group>"; };
+		D2A977C11BF4E9B400CC4DB9 /* シーワールド.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "シーワールド.png"; sourceTree = "<group>"; };
+		D2A977C31BF4E9F900CC4DB9 /* マザー牧場.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "マザー牧場.png"; sourceTree = "<group>"; };
+		D2A977C71BF4F5E100CC4DB9 /* 完成版2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "完成版2.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +228,61 @@
 			path = TravelJPUITests;
 			sourceTree = "<group>";
 		};
+		D21254341BF36D99006C18B0 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				D2A977C31BF4E9F900CC4DB9 /* マザー牧場.png */,
+				D2A977C11BF4E9B400CC4DB9 /* シーワールド.png */,
+				D2A977BF1BF4E42700CC4DB9 /* ミッキー.png */,
+				D2A977C71BF4F5E100CC4DB9 /* 完成版2.png */,
+				D2A977BD1BF4E33200CC4DB9 /* more.png */,
+				D2A977BB1BF4E25B00CC4DB9 /* 江ノ電2.png */,
+				D2A977B91BF4E18600CC4DB9 /* 江ノ電.png */,
+				D2A977B71BF4DFE200CC4DB9 /* レンガ.png */,
+				D2A977B51BF4DE9600CC4DB9 /* 渋谷3.png */,
+				D2A977B31BF4DD9300CC4DB9 /* 渋谷2.png */,
+				D2A977A91BF4DB0300CC4DB9 /* 中華街.png */,
+				D2A977A51BF4D87B00CC4DB9 /* 東京タワー.jpg */,
+				D2A977A61BF4D87B00CC4DB9 /* 東京タワー2.jpg */,
+				D2A977A31BF4D6D600CC4DB9 /* スカイツリー.png */,
+				D2A977A11BF4B5DB00CC4DB9 /* list4.png */,
+				D2A9779F1BF4B59400CC4DB9 /* list2.png */,
+				D2A9779D1BF4B4B600CC4DB9 /* List.png */,
+				D2A9779B1BF4B44F00CC4DB9 /* map2.png */,
+				D2A977991BF4B34900CC4DB9 /* map.png */,
+				D2A977971BF4A56900CC4DB9 /* 背景.png */,
+				D212544B1BF3753E006C18B0 /* actionChooser_Button.png */,
+				D21254351BF36D99006C18B0 /* 中国.gif */,
+				D21254491BF36E33006C18B0 /* 北海道.gif */,
+				D21254361BF36D99006C18B0 /* 九州.gif */,
+				D21254371BF36D99006C18B0 /* 信越北陸.gif */,
+				D21254391BF36D99006C18B0 /* 四国.gif */,
+				D212543A1BF36D99006C18B0 /* 東北.gif */,
+				D212543B1BF36D99006C18B0 /* 東海.gif */,
+				D212543C1BF36D99006C18B0 /* 沖縄.gif */,
+				D212543D1BF36D99006C18B0 /* 近畿.gif */,
+				D212543E1BF36D99006C18B0 /* 関東.gif */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		D23E82F61C1AA5F000C1FE6C /* AppIcon.appiconset */ = {
+			isa = PBXGroup;
+			children = (
+				D23E82F71C1AA5F000C1FE6C /* Icon-60@2x.png */,
+				D23E82F81C1AA5F000C1FE6C /* Icon-60@3x.png */,
+				D23E82F91C1AA5F000C1FE6C /* Icon-76.png */,
+				D23E82FA1C1AA5F000C1FE6C /* Icon-76@2x.png */,
+				D23E82FB1C1AA5F000C1FE6C /* Icon-Small-40.png */,
+				D23E82FC1C1AA5F000C1FE6C /* Icon-Small-40@2x.png */,
+				D23E82FD1C1AA5F100C1FE6C /* Icon-Small-40@3x.png */,
+				D23E82FE1C1AA5F100C1FE6C /* Icon-Small.png */,
+				D23E82FF1C1AA5F100C1FE6C /* Icon-Small@2x.png */,
+				D23E83001C1AA5F100C1FE6C /* Icon-Small@3x.png */,
+			);
+			path = AppIcon.appiconset;
+			sourceTree = "<group>";
+		};
 		D29279A51BD7C004005DA4D5 /* OGActionChooser */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,8 +314,9 @@
 		D29279AC1BD7C2A6005DA4D5 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				8B03EF861BD3E43E0086E7AE /* map.png */,
-				D29279A61BD7C02B005DA4D5 /* actionChooser_Button.png */,
+				D23E82F61C1AA5F000C1FE6C /* AppIcon.appiconset */,
+				D21254341BF36D99006C18B0 /* Buttons */,
+				D29279A61BD7C02B005DA4D5 /* actionChooser_Button2.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -308,11 +444,51 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B03EF871BD3E43E0086E7AE /* map.png in Resources */,
+				D23E83021C1AA5F100C1FE6C /* Icon-60@3x.png in Resources */,
+				D2A9779A1BF4B34900CC4DB9 /* map.png in Resources */,
+				D2A977981BF4A56900CC4DB9 /* 背景.png in Resources */,
+				D23E83091C1AA5F100C1FE6C /* Icon-Small@2x.png in Resources */,
+				D2A977B41BF4DD9300CC4DB9 /* 渋谷2.png in Resources */,
+				D21254451BF36D99006C18B0 /* 東海.gif in Resources */,
+				D2A977AA1BF4DB0300CC4DB9 /* 中華街.png in Resources */,
+				D212543F1BF36D99006C18B0 /* 中国.gif in Resources */,
 				8B97796B1BCA6DB200FF54D4 /* LaunchScreen.storyboard in Resources */,
+				D21254431BF36D99006C18B0 /* 四国.gif in Resources */,
 				8B9779681BCA6DB200FF54D4 /* Assets.xcassets in Resources */,
-				D29279A91BD7C02B005DA4D5 /* actionChooser_Button.png in Resources */,
+				D2A977A71BF4D87B00CC4DB9 /* 東京タワー.jpg in Resources */,
+				D2A977C01BF4E42700CC4DB9 /* ミッキー.png in Resources */,
+				D23E83081C1AA5F100C1FE6C /* Icon-Small.png in Resources */,
+				D2A9779E1BF4B4B600CC4DB9 /* List.png in Resources */,
+				D2A977B81BF4DFE200CC4DB9 /* レンガ.png in Resources */,
+				D23E83031C1AA5F100C1FE6C /* Icon-76.png in Resources */,
+				D23E83011C1AA5F100C1FE6C /* Icon-60@2x.png in Resources */,
+				D2A977BA1BF4E18600CC4DB9 /* 江ノ電.png in Resources */,
+				D21254461BF36D99006C18B0 /* 沖縄.gif in Resources */,
+				D2A977BE1BF4E33200CC4DB9 /* more.png in Resources */,
+				D29279A91BD7C02B005DA4D5 /* actionChooser_Button2.png in Resources */,
+				D21254401BF36D99006C18B0 /* 九州.gif in Resources */,
+				D2A977C21BF4E9B400CC4DB9 /* シーワールド.png in Resources */,
+				D2A977A01BF4B59400CC4DB9 /* list2.png in Resources */,
+				D2A977B61BF4DE9600CC4DB9 /* 渋谷3.png in Resources */,
+				D23E83051C1AA5F100C1FE6C /* Icon-Small-40.png in Resources */,
+				D2A977BC1BF4E25B00CC4DB9 /* 江ノ電2.png in Resources */,
+				D212544C1BF3753E006C18B0 /* actionChooser_Button.png in Resources */,
+				D21254411BF36D99006C18B0 /* 信越北陸.gif in Resources */,
+				D2A9779C1BF4B44F00CC4DB9 /* map2.png in Resources */,
+				D2A977A41BF4D6D600CC4DB9 /* スカイツリー.png in Resources */,
+				D21254471BF36D99006C18B0 /* 近畿.gif in Resources */,
+				D23E83071C1AA5F100C1FE6C /* Icon-Small-40@3x.png in Resources */,
+				D23E83061C1AA5F100C1FE6C /* Icon-Small-40@2x.png in Resources */,
+				D2A977A21BF4B5DB00CC4DB9 /* list4.png in Resources */,
+				D2A977C41BF4E9F900CC4DB9 /* マザー牧場.png in Resources */,
 				8B9779661BCA6DB200FF54D4 /* Main.storyboard in Resources */,
+				D212544A1BF36E33006C18B0 /* 北海道.gif in Resources */,
+				D21254481BF36D99006C18B0 /* 関東.gif in Resources */,
+				D2A977A81BF4D87B00CC4DB9 /* 東京タワー2.jpg in Resources */,
+				D2A977C81BF4F5E100CC4DB9 /* 完成版2.png in Resources */,
+				D23E830A1C1AA5F100C1FE6C /* Icon-Small@3x.png in Resources */,
+				D21254441BF36D99006C18B0 /* 東北.gif in Resources */,
+				D23E83041C1AA5F100C1FE6C /* Icon-76@2x.png in Resources */,
 				D29279A11BD7BEE5005DA4D5 /* ListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

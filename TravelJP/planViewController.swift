@@ -22,6 +22,11 @@ class planViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//-------------------------------------ナビゲーションバーカスタマイズ
+        let color2 = UIColor(red: 255/255, green: 158/255, blue: 35/255, alpha: 1.0)
+        // 背景の色を変えたい。
+        self.navigationController?.navigationBar.barTintColor = color2
+//-------------------------------------
     }
     
     //Table Viewのセルの数を指定
@@ -101,6 +106,21 @@ class planViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //add files or delete files
     
     @IBAction func AddFileButton(sender: AnyObject) {
+        if(self.label2Array.count > 9){
+            let alert = UIAlertController(
+                title: "ファイル数オーバー",
+                message: "これ以上ファイルを追加できません",
+                preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(
+                UIAlertAction(
+                    title: "OK",
+                    style: UIAlertActionStyle.Default,
+                    handler:nil
+                )
+            )
+            self.presentViewController(alert, animated: true, completion:nil)
+        }
+        
         let alert = UIAlertController(title: "新規ファイル", message: "名前を入力してください", preferredStyle: UIAlertControllerStyle.Alert)
         // キャンセルボタン
         let actionCancel = UIAlertAction(title: "Cancel", style: .Default, handler:nil)

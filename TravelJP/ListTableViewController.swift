@@ -18,9 +18,24 @@ class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIA
     let sectionTitleHokkaido = ["札幌","旭川","函館"]
     let sectionTitleOkinawa = ["沖縄県"]
     //===========================================================関東=========
+    //東京
     let tokyo = ["東京スカイツリー", "東京タワー", "渋谷","more"]
-    let chiba = ["ディズニー", "幕張", "船橋","more"]
-    let kanagawa = ["中華街", "赤レンガ倉庫", "江ノ島","more"]
+    let tokyoimg1 = UIImage(named:"スカイツリー.png")!
+    let tokyoimg2 = UIImage(named:"東京タワー2.jpg")!
+    let tokyoimg3 = UIImage(named:"渋谷3.png")!
+    let tokyoimg4 = UIImage(named:"more.png")!
+    //千葉
+    let chiba = ["ディズニーランド", "鴨川シーワールド", "マザー牧場","more"]
+    let chibaimg1 = UIImage(named:"ミッキー.png")!
+    let chibaimg2 = UIImage(named:"シーワールド.png")!
+    let chibaimg3 = UIImage(named:"マザー牧場.png")!
+    let chibaimg4 = UIImage(named:"more.png")!
+    //神奈川
+    let kanagawa = ["横浜中華街", "赤レンガ倉庫", "江ノ島","more"]
+    let kanagawaimg1 = UIImage(named:"中華街.png")!
+    let kanagawaimg2 = UIImage(named:"レンガ.png")!
+    let kanagawaimg3 = UIImage(named:"江ノ電2.png")!
+    let kanagawaimg4 = UIImage(named:"more.png")!
     //===========================================================北海道=========
     let sapporo = ["札幌1", "札幌2", "札幌3","more"]
     let asahikawa = ["旭川1", "旭川2", "旭川3","more"]
@@ -57,7 +72,6 @@ class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIA
         if saveData.objectForKey("file3Key") != nil {
             spotArray3 = saveData.objectForKey("file3Key") as! Array
         }
-        
         tableView.reloadData()
     }
     
@@ -98,13 +112,21 @@ class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIA
         return 4
     }
     
+//    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        var headerView: UIView!
+//        headerView.frame = CGRectMake(0,0,tableView.bounds.size.width, 40)
+//        return headerView
+//    }
+    
+    
     //===============================================各セルの内容
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! ListTableViewCell
-        //        let nowIndexPathDictionary: (AnyObject) = wordArray[indexPath.row]
         
-        //        cell.label1.text = nowIndexPathDictionary["english"] as? String
-        //        cell.label2.text = nowIndexPathDictionary["japanese"] as? String
+        var tokyoimg :[UIImage] = [tokyoimg1, tokyoimg2, tokyoimg3, tokyoimg4]
+        var kanagawaimg :[UIImage] = [kanagawaimg1, kanagawaimg2, kanagawaimg3, kanagawaimg4]
+        var chibaimg :[UIImage] = [chibaimg1, chibaimg2, chibaimg3, chibaimg4]
+        
         
         if(prefectureNumber == 1){//--------------------------北海道
             if(indexPath.section == 0){//==========================indexPath.sectionはセクション番号
@@ -117,10 +139,16 @@ class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIA
         }else if(prefectureNumber == 2){//--------------------関東
             if(indexPath.section == 0){
                 cell.label2.text = tokyo[indexPath.row]
+                cell.spotimage.image = tokyoimg[indexPath.row]//////////////////////////////
             }else if(indexPath.section == 1){
                 cell.label2.text = chiba[indexPath.row]
+                cell.spotimage.image = chibaimg[indexPath.row]
             }else if(indexPath.section == 2){
                 cell.label2.text = kanagawa[indexPath.row]
+                cell.spotimage.image = kanagawaimg[indexPath.row]
+            }
+            if(indexPath.row == 3){
+                cell.label2.textColor = UIColor.whiteColor()
             }
         }else if(prefectureNumber == 3){//--------------------沖縄
             if(indexPath.section == 0){
@@ -187,6 +215,63 @@ class ListTableViewController: UITableViewController,OGActionChooserDelegate,UIA
                 let b3: OGActionButton = OGActionButton.buttonWithTitle(fileName[2] as! String, imageName: imgName, enabled: true) as! OGActionButton
                 let b4: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
                 acSheet.setButtonsWithArray([b1,b2,b3,b4])
+            }else if(fileCount == 5){
+                let b1: OGActionButton = OGActionButton.buttonWithTitle(fileName[0] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b2: OGActionButton = OGActionButton.buttonWithTitle(fileName[1] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b3: OGActionButton = OGActionButton.buttonWithTitle(fileName[2] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b4: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b5: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                acSheet.setButtonsWithArray([b1,b2,b3,b4,b5])
+            }else if(fileCount == 6){
+                let b1: OGActionButton = OGActionButton.buttonWithTitle(fileName[0] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b2: OGActionButton = OGActionButton.buttonWithTitle(fileName[1] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b3: OGActionButton = OGActionButton.buttonWithTitle(fileName[2] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b4: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b5: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b6: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                acSheet.setButtonsWithArray([b1,b2,b3,b4,b5,b6])
+            }else if(fileCount == 7){
+                let b1: OGActionButton = OGActionButton.buttonWithTitle(fileName[0] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b2: OGActionButton = OGActionButton.buttonWithTitle(fileName[1] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b3: OGActionButton = OGActionButton.buttonWithTitle(fileName[2] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b4: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b5: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b6: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b7: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                acSheet.setButtonsWithArray([b1,b2,b3,b4,b5,b6,b7])
+            }else if(fileCount == 8){
+                let b1: OGActionButton = OGActionButton.buttonWithTitle(fileName[0] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b2: OGActionButton = OGActionButton.buttonWithTitle(fileName[1] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b3: OGActionButton = OGActionButton.buttonWithTitle(fileName[2] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b4: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b5: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b6: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b7: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b8: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                acSheet.setButtonsWithArray([b1,b2,b3,b4,b5,b6,b7,b8])
+            }else if(fileCount == 9){
+                let b1: OGActionButton = OGActionButton.buttonWithTitle(fileName[0] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b2: OGActionButton = OGActionButton.buttonWithTitle(fileName[1] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b3: OGActionButton = OGActionButton.buttonWithTitle(fileName[2] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b4: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b5: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b6: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b7: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b8: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b9: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                acSheet.setButtonsWithArray([b1,b2,b3,b4,b5,b6,b7,b8,b9])
+            }else if(fileCount >= 10){
+                let b1: OGActionButton = OGActionButton.buttonWithTitle(fileName[0] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b2: OGActionButton = OGActionButton.buttonWithTitle(fileName[1] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b3: OGActionButton = OGActionButton.buttonWithTitle(fileName[2] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b4: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b5: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b6: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b7: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b8: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b9: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                let b10: OGActionButton = OGActionButton.buttonWithTitle(fileName[3] as! String, imageName: imgName, enabled: true) as! OGActionButton
+                acSheet.setButtonsWithArray([b1,b2,b3,b4,b5,b6,b7,b8,b9,b10])
             }
             acSheet.presentInView(tableView.superview)
             //=========================================================
